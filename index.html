@@ -3,21 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Gluten Free Recipes</title>
   </head>
   <body>
     <h1>AI Gluten free recipes </h1>
-    <form action="">
-      <input type="text"
+    <div class="container">
+      <main>
+    <form action="" id = recipeGenerator>
+      <input type="text" id = "userInput"
       placeholder="Please enter ingredients"
       autofocus
       required
-      autocomplete="off">
-      <input type="submit">
-      <div>recipe found</div>
+      autocomplete="off"
+      class="instuctions"/>
+      <input type="submit" value = "submit" class="submit-button"/>
+      
     
   </form>
+  <div class="recipe" id ="recipe"></div>
+</main>
     <footer>
       coded by <a href="https://github.com/saz36"
       target="_blank">Saz</a> and is
@@ -31,7 +38,8 @@
       <a 
         href="https://glutenfreerecipes3.netlify.app/"
         target="_blank"> netifly</a>
-      
+      </div>
+            
     </footer>
     <script src="index.js"></script>
   </body>
