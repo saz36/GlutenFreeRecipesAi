@@ -15,7 +15,7 @@ function generateRecipe(event){
     let userInstructions = document.querySelector("#userInput");
     let apiKey = `ccedafe30c0o08ea49bb7fb493t06576`;
     let prompt = ` user instructions: generate a gluten free recipe about ${userInstructions.value}`;
-    let context = `be kind and polite. give list  of ingriedients in <li> and <strong> and then <br /> a paragraph of method maximum 10 lines.Temperature in celcius/farenheit.only suggest non barley vinegars. if user inputs barley,bulgur, wheat, rye, couscous, kamut, farina, spelt, wheat berries, farro suggest a alternative ingredient. <br />  Sign inside a <em> element at the footer with 'SheCodes AI' `;
+    let context = `be kind and polite. give list  of ingriedients in <li> and <strong> and then <br /> a paragraph of method maximum 10 lines.Temperature in celcius/farenheit.only suggest non barley vinegars. if user inputs barley,bulgur, wheat, rye, couscous, kamut, farina, spelt, wheat berries, farro suggest a alternative ingredient. <br />  at the footer sign inside a <em> element  with 'SheCodes AI' `;
     let url = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     
     let recipeElement = document.querySelector("#recipe");
